@@ -1,0 +1,62 @@
+
+.font h1{ 
+    font-family: 'East Sea Dokdo', cursive;
+      font-style: italic;
+    font-size: 140px;
+    font-weight: bold;
+  
+    color: #000;
+    
+      margin: 0 auto;
+      text-align: center;
+      
+  }
+      
+
+.doc-box {
+height: 1000px; color: white;padding: 3rem;
+
+ font-family: 'East Sea Dokdo', cursive;
+ font-style: italic;
+font-size: 20px;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+  
+.box1 {
+    background-image: url("../image/3.jpg");
+    margin: 0 auto;
+    padding: 1px;
+   
+}
+.box2 {
+      background-image: url("../image/5.jpg");
+      margin: 0 auto;
+    padding: 1px;
+}
+.box3 {
+      background-image: url("../image/12.jpg");
+      margin: 0 auto;
+    padding: 1px;
+}
+.box4 {
+      background-image: url("../image/27.jpg");
+      margin: 0 auto;
+    padding: 1px;
+
+  }
+
+.galleresall {margin:0 auto; padding: 0 ;}
+.galleresall ul {font-size:0;text-align:center;}
+.galleresall ul li {display:inline-block;vertical-align:top;width:300px;}
+.galleresall ul li a {text-decoration:none;}
+.galleresall ul li a {display:block;width:auto;margin:0 auto;}
+.galleresall ul li a .screen {overflow:hidden;font-size:0;height:300px;} 
+.galleresall ul li a img {width:100%;transition:transform 1s;  filter: grayscale(100%);
+  transition: 1s;}
+
+.galleresall ul li a:hover img {transform:scale(1.2);  filter: grayscale(0%);}
+
+footer{background-color: rgba(158, 137, 98, 0.384);clear: both;padding: 20px;text-align: center;  }

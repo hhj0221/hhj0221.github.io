@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>로드맵</title>
+
+
+
+</head>
+<style>
+    *{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+.header{ padding: 0; height: 200px;text-align: center;}
+
+  input[id*="answer"] {display:none;}
+  input[id*="answer"] + label {display:block;padding:20px;border:1px solid #000;border-bottom:0;color:#fff;font-weight:900;background-color:#000;cursor:pointer;position:relative;}
+
+  input[id*="answer"] + label + div {max-height:0;transition: all .35s;overflow:hidden;background:#c8ced1;font-size:10px;}
+  input[id*="answer"] + label + div p {display:inline-block;padding:20px;}
+  input[id*="answer"]:checked + label + div {max-height:100px;}
+  input[id*="answer"]:checked + label em {background-position:0 -30px;}
+
+input#sidebar {display:none;}
+    /* 헤더영역 */
+
+header > div {max-width:1024px;margin:0 auto;position:relative;min-height:20px;}
+header label.menu {position:absolute;top:50%;right:20px;transform:translateY(-20%);width:24px;height:24px;background:url('../hwnaghyunjun/image/menu.png') 0 0 no-repeat;cursor:pointer;}
+
+/* 본문영역 */
+.container {max-width:1024px;margin:0 auto;}
+.container img {max-width:100%;}
+
+/* 사이드바 */
+.sidebar_content {position:fixed;top:0;right:-300px;width:300px;height:100%;background:rgb(236, 223, 223);transition:all .35s;z-index:5;}
+.sidebar_content > ul {margin:20px;}
+.sidebar_content > ul > li {border-bottom:1px solid #ccc;list-style:none;}
+.sidebar_content > ul > li > a {display:inline-block;width:auto;columns: #d3cbcb;;padding:10px;margin:10px; text-decoration: none; /*이걸 해줘여 밑줄이 안생김 !!*/}
+.sidebar_content label[for*='sidebar'] {position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1;}
+
+/* 사이드바 외 배경영역 */
+.background {position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);transition:all .35s;opacity:0;visibility:hidden;z-index:1;}
+  .pic>background {position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);transition:all .35s;opacity:0;visibility:hidden;z-index:1;}
+/* input 체크 */
+input#sidebar:checked ~ header label {background-position:-24px 0;}
+input#sidebar:checked ~ .sidebar_content {right:0;}
+input#sidebar:checked ~ .background  {opacity:1;visibility:visible;}
+
+/*버튼*/
+.tab_content {text-align:center;font-size:0;}
+   input[type="radio"] {display:none;} 
+   input[type="radio"] + label {display:inline-block;padding:0px 150px;background:#f5f5f5;color:#000;font-size:14px;cursor:pointer;line-height: 50px; } 
+   input[type="radio"]:checked + label {background:#999;color:#000;}
+   
+   .conbox {background:#999;margin:0 20px;display:none;text-align:left;font-size:12px;padding:20px;box-sizing:border-box;} 
+   input[id="tab01"]:checked ~ .con1 {display:block;} 
+   input[id="tab02"]:checked ~ .con2 {display:block;}
+   input[id="tab03"]:checked ~ .con3 {display:block;}
+   .font h1{ 
+	text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+    color: #000;
+      margin: 0 auto;
+
+      
+  }
+  
+  footer{background-color: rgba(158, 137, 98, 0.384);clear: both;padding: 20px;text-align: center;  }
+   
+</style>
+<header>
+	<div>
+		<label for="sidebar" class="menu"></label>
+		
+<!-- 사이드바 외 영역 -->
+<label for="sidebar" class="background">
+</label>
+
+    <div class="font">
+      <h1>로드맵</h1>
+  </div>
+
+</header>
+<body>
+    <input type="checkbox" id="sidebar">
+<!-- 헤더 네비게이션 -->
+<!-- 사이드바 -->
+<div class="sidebar_content">
+	<ul>
+    <li><a href="여행.html">HOME</a></li>
+    <li><a href="자기소개.html">자기소개</a></li>
+    <li><a href="로드맵.html">로드맵</a></li>
+    <li><a href="회원가입.html">회원가입</a></li>
+		
+	</ul>
+	<label for="sidebar"></label>
+</div>
+
+<section> 
+  <div class="accordion">
+    
+    <input type="radio" name="accordion" id="answer01">
+
+        <label for="answer01">Git</label>
+        <div><p>  협업이나 효과적인 서비스 개발 및 운영을 위해 꼭 필요한 도구이다. 반드시 사용할줄 알아야한다</p></div>
+        <input type="radio" name="accordion" id="answer01">
+        <input type="radio" name="accordion" id="answer02">
+        <label for="answer02">SSH</label>
+        <div><p>내 컴퓨터의 터미널에서 서버 컴퓨터의 터미널에 접속할 수 있게 해주는 프로토콜이다. 서버에서 작업을 진행하려면 꼭 알아야한다.</p></div>
+       
+        <input type="radio" name="accordion" id="answer03">
+        <label for="answer03">HTTP/HTTPS and APIs</label>
+        <div><p>네트워크 통신과 관련된 가장 기초적인 것들이다. 그리고 API들을 다룰줄 알게되면 할 수 있는 개발의 폭도 넓어진다.</p></div>
+
+        <input type="radio" name="accordion" id="answer04">
+        <label for="answer04">Basic Terminal Usage</label>
+        <div><p> 터미널을 쓸줄 알아야 하는건 모든 개발자나 마찬가지이다. 특히 'Vim'은 꼭 쓸줄 알아야 한다.</p></div>
+        
+        <input type="radio" name="accordion" id="answer05">
+        <label for="answer05">Learn to Research</label>
+        <div><p>오류가 났을 때 인터넷을 찾아보고 스스로 해결할 수 있는 능력을 기르는게 중요하다. 제일 쉬운 해결 방법은 깃허브 이슈를 찾아 보거나 스택 오버 플로우에서 찾아보는게 있다</p></div>
+
+        <input type="radio" name="accordion" id="answer06">
+        <label for="answer06">CSS</label>
+        <div><p>Cascading Style Sheet의 줄인 말로, 웹 페이지의 디자인과 관련된 부분을 담당한다</p></div>
+
+        <input type="radio" name="accordion" id="answer07">
+        <label for="answer07">javascript</label>
+       
+        <div><p> 프런트엔드 개발은 javascript가 필수이다. 웹의 역사에 javascript가 쓰이면서 사용자들은 더 다양한 경험을 할 수 있게 되었다. 프런트엔드 프레임워크가 전부 자바스크립트를 기반으로 두고 있기 때문에 javascript를 잘하면 정말 유리하다.</p></div>
+        <input type="radio" name="accordion" id="answer08">
+        <label for="answer08">Typescript</label>
+        <div><p>작년에 구글에서 회사 사내 공식 언어로 'Typescript'를 체택하면서 화제가 되었었다. Typescript는 javascript의 변수에 타입을 부여하는 뭐 그런 친구이다. 그 외에도 다양한 기능들이 있고, 구글에서 사내 공식 언어로 체택하면서 앞으로의 가능성이 밝다고 볼 수 있다.</p></div>
+      
+        <input type="radio" name="accordion" id="answer09">
+        <label for="answer09">Sass/HTTPS and APIs</label>
+        <div><p>Sass는 CSS 전처리기(Preprocessor)로서, 변수 설정이라든지, 반복문이라든지, CSS 파일을 만들 때 많은 편리한 기능을 제공한다. 개인적으로 정말 편하게 쓰고 있기 때문에 강력 추천한다.</p></div>
+     
+        <input type="radio" name="accordion" id="answer10">
+        <label for="answer10">Basic Terminal Usage</label>
+        <div><p> 터미널을 쓸줄 알아야 하는건 모든 개발자나 마찬가지이다. 특히 'Vim'은 꼭 쓸줄 알아야 한다.</p></div>
+       
+        <input type="radio" name="accordion" id="answer11">
+        <label for="answer11">React, Angular</label>
+        <div><p>프런트엔드 프레임워크 중에서는 상위권에 있는 프레임워크라고 볼 수 있다. 사실 웬만한 프런트엔드 개발은 jQuery를 써서 할 수도 있지만 사용자들에게 빠르고 정확한 서비스 제공을 원한다면 이용</p></div>
+     
+        <input type="radio" name="accordion" id="answer12">
+        <label for="answer12">Sass</label>
+        <div><p>Cascading Style Sheet의 줄인 말로, 웹 페이지의 디자인과 관련된 부분을 담당한다</p></div>
+       
+  
+        <input type="radio" name="accordion" id="answer13">
+        <label for="answer13">javascript</label>
+        <div><p>  프런트엔드 개발javascript가 필수이다. 웹의 역사에 javascript가 쓰이면서 사용자들은 더 다양한 경험을 할 수 있게 되었다. 프런트엔드 프레임워크가 전부 자바스크립트를 기반으로 두고 있기 때문에 javascript를 잘하면 정말 유리하다.
+        웹의 백엔드는 정말 다양한 언어로 만들어 낼 수 있다.구글에서 만든 Go언어로도 가능하다. 심지어 웹 프로그래밍에는 잘 사용되지 않는 C언어로도 HTTP 통신만 잘 이해하고 있다면 백엔드를 구축할 수 있다. 
+        그렇기에 백엔드 개발에 있어서는어떤 언어로 개발할 것인가. 어떤 데이터베이스를 이용할 것인가.웹 서버는 어떤 엔진으로 구성할 것인가, 어떤 OS로 구동할 것인가.</p></div>
+        <input type="radio" name="accordion" id="answer14">
+        <label for="answer14">Ruby</label>
+        <div><p>루비는 마츠모토 유키히로가 개발한 동적 객체 지향 스크립트 프로그래밍 언어로서, 루비 언어의 가장 큰 특징이라고 하면 순수 객체 지향 언어라, 
+            정수나 문자열 등을 포함한 데이터 형식 등 모든 것이 객체라는 것이다. 단점이 있다면 우리나라에서는 커뮤니티가 활성화가 잘 이루어져 있지 않아서 개발에 필요한 자료들을 찾기 힘들 수 있다. 
+            일본에는 루비 개발자가 많으므로 일본어를 좀 한다면 도전해보는 것도 좋다.</p></p></div>
+        <input type="radio" name="accordion" id="answer15">
+        <label for="answer15">Python은</label>
+        <div><p>오늘날 정말 유명하고, 해킹 등의 분야에서도 널리 쓰이는 인터프리터 언어이다. 
+            개발 효율성이 높아서 많이 쓰이고 있다. 특히 Django 프레임워크를 이용하면 빠르게 웹 서비스를 구축할 수 있다. 
+            단점이 있다면 루비와 마찬가지로 개발에 필요한 자료를 얻기 쉽지 않을 것이다. 영어를 좀 한다면 도전해볼만 하다. 
+            그리고 무엇보다도 좀 어렵다. Python 자체의 패키지를 이용할 수 있다는 것은 큰 장점이다. Socket이라든지, Python이 내장하고 있는 패키지와 모듈들을 활용할 수 있다.</p></div>
+        <input type="radio" name="accordion" id="answer16">
+        <label for="answer16">Node.js</label>
+        <div><p> Node.js는 javascript로 짜여진 웹 엔진(?) (공식사이트에서는 런타임이라고 하더라)이다.
+            그 어떤 다른 백엔드보다 빠르게 웹 서비스를 구축할 수 있다는게 특징이다.패키지 매니저인 npm을 통해서 하루에 수천 수만개씩 쏟아져 나오는 패키지들을 활용할 수 있기 때문에 npm으로 패키지 모듈 3~40개를 다운 받아서 조합하는 것 만으로도 멋진 웹 서비스를 만들어낼 수 있다.
+              스타트업에서 서비스 프로토타입을 만드는데 많이 사용한다. 초기에는 Node.js의 안정성이 떨어지는게 문제로 떠올랐지만,  지금은 뭐 그런거 같지도 않다. 작년까지는 NoSQL이 뜨면서 Node.js와 MongoDB가 자주 쓴다</p></div>
+        <input type="radio" name="accordion" id="answer17">
+        <label for="answer17">php</label>
+        <div><p> 굉장히 오래된 언어이다. 웹 개발의 원조라고 할 수 있고, 낮은 진입 장벽과 수십년에 걸쳐 쌓여온 방대한 자료가 있다. 흔히 PHP가 배우기 쉽다고 해서 개발을 처음 시작하는 사람들이 많이 사용한다.
+            하지만 오래된 언어인 만큼 연구가 많이 되어서 보안에 취약하다는 분석이 있다. 하지만 PHP7이 나오면서 속도가 대폭 향상되고 현대의 프로그래밍 언어의 요소들도 추가되면서 써볼만한 언어가 되었다. 보안 문제는 개발자가 주의를 조금 더 기울여서 시큐어 코딩을 하면 해결할 수 있는 문제이고, 다양한 PHP 프레임워크에서도 보안 문제를 해결해 주고 있다. 나도 백엔드 개발을 PHP로 시작했기 때문에 웹개발을 처음 시작하는 사람들에게 추천한다. 데이터베이스로는 단짝 친구인 MySQL, MariaDB 등을 많이 사용한다.
+           어떤 언어로 백엔드 개발을 할지는 만들고자하는 서비스의 규모, 기한 등을 고려해서 선정하면 된다.빠른 시간 내에 만들어야 하는 프로젝트라면 Node.js를 추천하고, 웹 개발을 접해보지 못했지만 시작해야 하는 경우라면 PHP를 추천한다.그 외에 Ruby나 Python을 이용해서 개발을 해야 한다면 프레임워크로 Ruby는 Ruby On Rails, Python은 Django를 추천한다</p></div>
+
+
+
+
+    </div>
+  </article>
+  </section>
+<br>
+<hr></hr>
+    <footer>
+      
+      <p>Copyright © HWNANG HYUN JUN Institute All Right Reserved</p>
+ 
+  </footer>
+ 
+
+</body>
+</html>

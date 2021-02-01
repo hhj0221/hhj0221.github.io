@@ -1,0 +1,65 @@
+
+    html{ width: 1024px; height: 768px; margin: 0 auto; }
+   .header{ padding: 0; height: 200px;text-align: center;}
+    nav{ margin:0 auto; height: 24px;}
+   .image1{ position: relative;}
+   .imtext{position: absolute;color: #fff;top:30px; left: 400px;z-index: 1;font-size: 70px;width: 10px;font-weight:bold;}
+  .imtext1{position: absolute;color: #fff; top:110px;left: 400px;z-index: 1;font-size: 15px;}
+ .text-white1-2{
+   margin: 0 auto;
+   font-size: 20px;
+    text-align: center;
+  }
+  nav >h1{margin: 1px ;text-align: center;}
+    section {  height: 650px; }
+      .border-test{ margin: 0 auto;width: 80px;height: 80px; background-color :black ;border: 3px solid gold; color: #fff;text-align: center;border-radius: 70%;}  
+    .aaaa{margin: 0 auto;font-size: 20px;line-height: 70px;}
+  /*자기소개에서 사진을 올렸을때 호버나오게하는 장면은 div위에 div
+속성값으로 기준을잡는 relative 렐
+위치를 잡는 absolute잡는 것을 사용했습니다
+오버풀로 히든갖고있는 요소안에 들어있는 자식요소들이 밖으로나가면 가려지는 것을 사용했다
+처음에는 안보였다가 보이는거
+트렌지션 바탐에서 150% 바텀 자연스럽게 나오는것이다.초를 줘서내려오는거*/
+  .gallerylist {max-width:1000px;width:100%;margin:0 auto;}
+ .gallerylist > ul {font-size:0;}
+ .gallerylist > ul > li {display:inline-block;vertical-align:top;width:33.3%;}
+ .gallerylist > ul > li > a {display:block;width:auto;text-decoration: none;margin:5px;}
+ .gallerylist > ul > li > a .screen {position:relative;overflow:hidden;}  /* relative기준을잡는 요소위에 요소.레이어의 속성값 기준
+ 외영역가리기 */
+ .gallerylist > ul > li > a .screen .top {position:absolute;bottom:150%;left:30px;z-index:2;color:#fff;font-size:26px;font-weight:900;transition:all .35s;}  /* 기준을잡는 요소위에 요소.레이어의 속성값 기준*/
+ .gallerylist > ul > li > a .screen .bottom {position:absolute;top:150%;left:30px;z-index:2;color:#fff;font-size:12px;transition:all .35s;}/*bottom 위로부터 150%
+ 레이어우선순위는 2로 위치는 잡는요소위에 요소  표지션 2*/
+ 
+ .gallerylist > ul > li > a .screen img {width:100%;}
+ .gallerylist > ul > li > a h3 {font-size:14px;text-align:center;padding:1px;color:#666;}
+ .gallerylist > ul > li > a .screen::after {content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);
+ z-index:1;opacity:0;transition:all .35s;}
+ .gallerylist > ul > li > a:hover .top {bottom:52%;}    /*마우스를 올리면 아래로 사이즈 지정*/
+ .gallerylist > ul > li > a:hover .bottom {top:52%;} /*마우스를 올리면 위로사이즈 지정*/
+ .gallerylist > ul > li > a:hover .screen::after {opacity:1;} /*가상요소를 준것이다 이것을*/
+
+
+
+ div#gallery{	width:900px;	height:50px;	margin:0 auto;	}
+ 	#gallery ul li {	position: relative;list-style: none;display: inline-block;cursor: pointer;	}
+  #gallery img.small:hover + img.pic {/* display: block; */visibility: visible;	}
+  #gallery img.pic {	position:absolute;/* display: none; */	visibility: hidden;left: 95px;top: 10px;z-index: 10;}
+ footer{background-color: rgba(158, 137, 98, 0.384);clear: both;padding: 20px;text-align: center;  }
+
+
+     .bannner {position:relative;display:inline-block; }
+     .bannner img {max-width:100%;}
+     .bannner span.text {position:absolute;top:50%;left:0;transform:translateY(-50%);display:none;width:100%;font-size:10px;color:#fff;font-weight:50;text-align:center;}
+     /* transform:translateY(-50%)
+    위쪽으로 50%  왼쪽으로 50%으로 기준을 줘야하는데 그러게 되면 밖으로 되는데
+
+        X:-50Y:-50%을 줘서 가운데로 바꿔준다. */
+     .bannner::before, .bannner::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);transition:all .8s;-webkit-transition:all .8s;}
+     .bannner::before {width:97%;height:93%;border-top:1px solid #fff;border-bottom:1px solid #fff;width:0;} /* 보더의 두께가 있기 때문에 요소의 크기에 계산해 줘야 합니다 */
+     .bannner::after {width:97%;height:95%;border-left:1px ㅇ;border-right:1px solid #fff;height:0;} /* 보더의 두께가 있기 때문에 요소의 크기에 계산해 줘야 합니다 */
+     
+     /* 마우스가 올라가면 반응하는 소스 */
+     .bannner:hover span.text {display:block;}
+     .bannner:hover::before {width:calc(97% + 4px);} /* 화면에 따라서 정확한 사각형을 위한 값을 줘야하는 부분 */
+     .bannner:hover::after {height:calc(95% + 4px);} /* 보더의 두께값을 더해줘서 정확한 모서리를 만들기 위해 calc값을 사용했습니다 */
+     

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행</title>
+    <script =type="text/javascript" src="../hwnaghyunjun/js/lightbox-plus-jquery.min.js"> </script>
+    <link rel ="stylesheet " type="text/css" href="../hwnaghyunjun/css/lightbox.min.css">
+    
+    <link rel ="stylesheet " type="text/css" href="../hwnaghyunjun/css/image.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Sofia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../hwnaghyunjun/css/main.css">
+
+</head>
+
+
+
+
+<body>
+    <input type="checkbox" id="sidebar">
+  <style>
+
+
+  *  {margin:0;padding:0;}
+input#sidebar {display:none;}
+    /* 헤더영역 */
+header {background-color:#f5f5f5;position:relative;z-index:4;}
+header > div {max-width:1200px;margin:0 auto;position:relative;min-height:60px;}
+header label.menu {position:absolute;top:50%;right:10px;transform:translateY(-50%);width:24px;height:24px;background:url('../hwnaghyunjun/image/menu.png') 0 0 no-repeat;cursor:pointer;}
+
+/* 본문영역 */
+.container {max-width:1200px;margin:0 auto;}
+.container img {max-width:100%;}
+
+/* 사이드바 */
+.sidebar_content {position:fixed;top:0;right:-300px;width:300px;height:100%;background:#999;transition:all .35s;z-index:5;}
+.sidebar_content > ul {margin:20px;}
+.sidebar_content > ul > li {border-bottom:1px solid #ccc;list-style:none;}
+.sidebar_content > ul > li > a {display:inline-block;width:auto;color:#000;padding:10px;margin:10px;   text-decoration: none; /*이걸 해줘여 밑줄이 안생김 !!*/}
+.sidebar_content label[for*='sidebar'] {position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1;}
+
+
+/* 사이드바 외 배경영역 */
+.background {position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);transition:all .35s;opacity:0;visibility:hidden;z-index:1;}
+  .pic>background {position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);transition:all .35s;opacity:0;visibility:hidden;z-index:1;}
+/* input 체크 */
+input#sidebar:checked ~ header label {background-position:-24px 0;}
+input#sidebar:checked ~ .sidebar_content {right:0;}
+input#sidebar:checked ~ .background  {opacity:1;visibility:visible;}
+
+/*버튼*/
+.tab_content {text-align:center;font-size:0;}
+   input[type="radio"] {display:none;} 
+   input[type="radio"] + label {display:inline-block;padding:0px 150px;background:#f5f5f5;color:#000;font-size:14px;cursor:pointer;line-height: 50px; } 
+   input[type="radio"]:checked + label {background:#999;color:#000;}
+   
+   .conbox {background:#999;margin:0 20px;display:none;text-align:left;font-size:12px;padding:20px;box-sizing:border-box;} 
+   input[id="tab01"]:checked ~ .con1 {display:block;} 
+   input[id="tab02"]:checked ~ .con2 {display:block;}
+   input[id="tab03"]:checked ~ .con3 {display:block;}
+  </style> 
+    
+<!-- 헤더 네비게이션 -->
+<header>
+    <div>
+		<label for="sidebar" class="menu"></label>
+	</div>
+    <div class="font">
+        <h1> My travel picture</h1>
+	</div>
+</header>
+
+
+<!-- 사이드바 -->
+<div class="sidebar_content">
+	<ul>
+		<li><a href="여행.html">HOME</a></li>
+        <li><a href="자기소개.html">자기소개</a></li>
+		<li><a href="로드맵.html">로드맵</a></li>
+		<li><a href="회원가입.html">회원가입</a></li>
+		
+	</ul>
+	<label for="sidebar"></label>
+</div>
+<!-- 사이드바 외 영역 -->
+<label for="sidebar" class="background"></label>
+
+</div>
+   
+    <div class="doc-box box1">
+        <h1>
+        후쿠오카 지방쪽 히타마부시 센야 </h1>
+        <p>장어 덮밥으로  정말 유명한집이다 11시 오픈이라 미리 종이에 적어두고 기다려야 한다.여기는 볼거리가 아주 많은 곳이다.그리고 !!! 여기는 소주가 정말 맛있다..깔끔.. 중간중간 명물인 간장이랑 이것저것 판다 여기서
+            돈을 많이 쓰고싶었지만 첫날이라...ㅠㅠ 살짝 아쉬웠다...돈을 많이 챙겨 가야한다!! 장어덮밥 가겨은 3천엔 곱빼기는 4만8천엔 정도 한다!.
+        </p>
+    </div>
+    
+    <div class="doc-box box2">
+        <h1>후쿠오카 하카타 니쿠이찌</h1>
+        <p>여기는 소고기가 정말 맛있다 그만큼 가격이 정말 쎈 가격이다..이날은 제가 실수해서 동생들한테 사준 날이이다.. 다음날에 가야할 장소인데 ...ㅠㅠ스케쥴을 같이짜야한다...나혼자하니깐 힘들다 ㅎ
+            1만8천엔..정도 나온기억
+        </p>
+    </div>
+    
+    <div class="doc-box box3">
+        <h1>후쿠오카 하카타 니쿠이찌</h1>
+        <p>니쿠이찌에 나오는 셀러드 사진 잘나와서~~</p>
+    
+   
+    </div>
+    
+    <div class="doc-box box4">
+        <h1>후쿠오카 미노시마-몬자야키시타마치야 </h1>
+        <p>여기는 동생들은 따로 논다고해서 와이파이 주고 집에있다가 나혼자 나와서 먹었던 기억이다.. 7시쯤 나가서 9시까지 기다려야 한다고해서 기다렸다.. 우연히 가다가
+            일본 로컬 맛집을 찾은 곳이다 ㅎ
+        </p>
+    </div>
+    
+    <hr>
+    	<!-- Gallery -->
+        <div class="tab_content">
+   
+
+            <input type="radio" name="tabmenu" id="tab01" checked>
+            <label for="tab01">All</label>
+            <input type="radio" name="tabmenu" id="tab02">
+            <label for="tab02">People</label>
+            <input type="radio" name="tabmenu" id="tab03">
+            <label for="tab03">food</label>
+            <hr>
+            <div class="font">
+                <h1>what's New</h1>
+            </div>
+           
+            <div class="conbox con1">
+                 <section id ="galleries">
+          <div class="container">
+          
+          
+            
+              
+             <div class="galleresall">
+            
+               
+                     <ul>
+                         <li> 
+                          <a href="../hwnaghyunjun/imagefull/1.jpg" data-lightbox="mygallery" data-title="All">
+                          <div class="screen">    <img src="../hwnaghyunjun/image/1.jpg" width="300" height="300" ></div>
+                          </a>
+                   
+                      </li>   
+                  
+                   
+                  <li>
+                      <a href="../hwnaghyunjun/imagefull/33.jpg" data-lightbox="mygallery"data-title="All">
+                          <div class="screen"><img src="../hwnaghyunjun/image/33.jpg"width="300" height="300"></div>
+                        
+                      </a>
+                  </li>
+                  
+                  <li>
+                      <a href="../hwnaghyunjun/imagefull/30.jpg"data-lightbox="mygallery"data-title="All">
+                          <div class="screen"><img src="../hwnaghyunjun/image/30.jpg"width="300" height="300"></div>
+                        
+                      </a>
+                  </li>
+                  <li>
+                      <a href="../hwnaghyunjun/imagefull/45.jpg"data-lightbox="mygallery"data-title="All">
+                          <div class="screen"><img src="../hwnaghyunjun/image/45.jpg"width="300" height="300"></div>
+                        
+                      </a>
+                  </li>
+                  <li>
+                      <a href="../hwnaghyunjun/imagefull/29.jpg"data-lightbox="mygallery"data-title="All">
+                          <div class="screen"><img src="../hwnaghyunjun/image/29.jpg"width="300" height="300"></div>
+                        
+                      </a>
+                  </li>
+                  <li>
+                      <a href="../hwnaghyunjun/imagefull/36.jpg"data-lightbox="mygallery"data-title="All">
+                          <div class="screen"><img src="../hwnaghyunjun/image/36.jpg"width="300" height="300"></div>
+                        
+                      </a>
+                  </li>
+                  <li>
+                      <a href="../hwnaghyunjun/imagefull/5.jpg"data-lightbox="mygallery"data-title="All">
+                          <div class="screen"><img src="../hwnaghyunjun/image/5.jpg"width="300" height="300"></div>
+                        
+                      </a>
+                  </li>
+                  <li>
+                      <a href="../hwnaghyunjun/imagefull/11.jpg"data-lightbox="mygallery" data-title="All">
+                          <div class="screen"><img src="../hwnaghyunjun/image/11.jpg"width="300" height="300"></div>
+                        
+                      </a>
+                  </li>
+                  <li>
+                      <a href="../hwnaghyunjun/imagefull/31.jpg"data-lightbox="mygallery"data-title="All">
+                          <div class="screen"><img src="../hwnaghyunjun/image/31.jpg"width="300" height="300"></div>
+                        
+                      </a>
+                  </li>
+                  <li>
+                      <a href="../hwnaghyunjun/imagefull/41.jpg"data-lightbox="mygallery"data-title="All">
+                          <div class="screen"><img src="../hwnaghyunjun/image/41.jpg"width="300" height="300"></div>
+                        
+                      </a>
+                  </li>
+                  <li>
+                      <a href="../hwnaghyunjun/imagefull/40.jpg"data-lightbox="mygallery"data-title="All">
+                          <div class="screen"><img src="../hwnaghyunjun/image/40.jpg"width="300" height="300"></div>
+                        
+                      </a>
+                  </li>
+                  <li>
+                      <a href="../hwnaghyunjun/imagefull/48.jpg"data-lightbox="mygallery"data-title="All">
+                          <div class="screen"><img src="../hwnaghyunjun/image/48.jpg"width="300" height="300"></div>
+                        
+                      </a>
+                  </li>
+                  <li>
+                      <a href="../hwnaghyunjun/imagefull/47.jpg"data-lightbox="mygallery"data-title="All">
+                          <div class="screen"><img src="../hwnaghyunjun/image/47.jpg"width="300" height="300"></div>
+                        
+                      </a>
+                  </li>
+                  <li>
+                      <a href="../hwnaghyunjun/imagefull/7.jpg"data-lightbox="mygallery"data-title="All">
+                          <div class="screen"><img src="../hwnaghyunjun/image/7.jpg"width="300" height="300"></div>
+                        
+                      </a>
+                  </li>
+                  <li>
+                      <a href="../hwnaghyunjun/imagefull/50.jpg"data-lightbox="mygallery"data-title="All">
+                          <div class="screen"><img src="../hwnaghyunjun/image/50.jpg"width="300" height="300"></div>
+                        
+                      </a>
+                  </li>
+                  <li>
+                      <a href="../hwnaghyunjun/imagefull/46.jpg"data-lightbox="mygallery"data-title="All">
+                          <div class="screen"><img src="../hwnaghyunjun/image/46.jpg"width="300" height="300"></div>
+                        
+                      </a>
+                  </li>
+      
+             </ul>
+          
+         
+                    </div>
+                 
+            
+              </div>
+      
+      
+      
+        </section>
+            </div>
+            <div class="conbox con2">
+                <section id ="galleries">
+                    <div class="container">
+                    
+                    
+                      
+                        
+                       <div class="galleresall">
+                      
+                         
+                               <ul>
+                                   <li> 
+                                    <a href="../hwnaghyunjun/imagefull/1.jpg" data-lightbox="mygallery" data-title="People">
+                                    <div class="screen">    <img src="../hwnaghyunjun/image/1.jpg" width="300" height="300" ></div>
+                                    </a>
+                             
+                                </li>   
+                            
+                             
+                            <li>
+                                <a href="../hwnaghyunjun/imagefull/19.jpg"data-lightbox="mygallery"data-title="People">
+                                    <div class="screen"><img src="../hwnaghyunjun/image/19.jpg"width="300" height="300"></div>
+                                  
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="../hwnaghyunjun/imagefull/8.jpg"data-lightbox="mygallery"data-title="People">
+                                    <div class="screen"><img src="../hwnaghyunjun/image/8.jpg"width="300" height="300"></div>
+                                  
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../hwnaghyunjun/imagefull/21.jpg"data-lightbox="mygallery"data-title="People">
+                                    <div class="screen"><img src="../hwnaghyunjun/image/21.jpg"width="300" height="300"></div>
+                                  
+                                </a>
+                            </li>
+                     
+                       </ul>
+                    
+                   
+                              </div>
+                           
+                      
+                        </div>
+                
+                
+                
+                  </section>
+            </div>
+            <div class="conbox con3">
+                <section id ="galleries">
+                    <div class="container">
+                    
+                    
+                      
+                        
+                       <div class="galleresall">
+                      
+                         
+                               <ul>
+                                   <li> 
+                                    <a href="../hwnaghyunjun/imagefull/3.jpg" data-lightbox="mygallery" data-title="Food">
+                                    <div class="screen">    <img src="../hwnaghyunjun/image/3.jpg" width="300" height="300" ></div>
+                                    </a>
+                             
+                                </li>   
+                            
+                             
+                            <li>
+                                <a href="../hwnaghyunjun/imagefull/4.jpg"data-lightbox="mygallery"data-title="Food">
+                                    <div class="screen"><img src="../hwnaghyunjun/image/4.jpg"width="300" height="300"></div>
+                                  
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="../hwnaghyunjun/imagefull/5.jpg"data-lightbox="mygallery"data-title="Food">
+                                    <div class="screen"><img src="../hwnaghyunjun/image/5.jpg"width="300" height="300"></div>
+                                  
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../hwnaghyunjun/imagefull/10.jpg"data-lightbox="mygallery"data-title="Food">
+                                    <div class="screen"><img src="../hwnaghyunjun/image/10.jpg"width="300" height="300"></div>
+                                  
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../hwnaghyunjun/imagefull/11.jpg"data-lightbox="mygallery"data-title="Food">
+                                    <div class="screen"><img src="../hwnaghyunjun/image/11.jpg"width="300" height="300"></div>
+                                  
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../hwnaghyunjun/imagefull/16.jpg"data-lightbox="mygallery"data-title="Food">
+                                    <div class="screen"><img src="../hwnaghyunjun/image/16.jpg"width="300" height="300"></div>
+                                  
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../hwnaghyunjun/imagefull/37.jpg"data-lightbox="mygallery"data-title="Food">
+                                    <div class="screen"><img src="../hwnaghyunjun/image/37.jpg"width="300" height="300"></div>
+                                  
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../hwnaghyunjun/imagefull/40.jpg"data-lightbox="mygallery" data-title="Food">
+                                    <div class="screen"><img src="../hwnaghyunjun/image/40.jpg"width="300" height="300"></div>
+                                  
+                                </a>
+                            </li>
+                     
+                       </ul>
+                    
+                   
+                              </div>
+                           
+                      
+                        </div>
+                
+                
+                
+                  </section>
+            </div>
+         
+         </div>
+<br>
+<br>
+<br>
+<hr>
+  <footer>
+      
+    <p>Copyright © HWNANG HYUN JUN Institute All Right Reserved</p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+body{
+    font-family:  sans-serif;;
+}
+
+.Gallery{
+    margin: 10px 50px;
+}
+.Gallery img{
+    width: 300px;
+   
+    padding: 5px;
+    filter: grayscale(100%);
+    transition: 1s;
+}
+.Gallery img:hover{
+    filter: grayscale(0%);
+    transition: 1s;
+}
